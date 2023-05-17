@@ -14,7 +14,7 @@ for i in range(100):
     x = random.randrange(1, 30)
     listRandom.append(x)
 print(listRandom) """
-listA = [12, 1, 3, 3, 10, 13, 14, 14, 29, 26]
+listA = [1, 2, 3, 4]
 import json
 listPrime = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
 listOK = []
@@ -31,23 +31,27 @@ for each in listA:
         k *= m
     if k == each and k != 1:
         listOK.append(each)
-print(listOK)
 k = len(listOK)
 Pairlist = [(10, 14), (13, 26), (14, 26)]
 import itertools
 import math
 import re
-x = itertools.combinations(listOK, 2)
-print(list(x))
-z = Pairlist[1]
 
+myList = []
+for i in range(1, k):
+    x = itertools.combinations(listOK, i)
+    listM = list(x)
+    print(listM)
+    l = len(listM)
+    for m in range(l):
+        listX = list(itertools.combinations(listM[m], 2))
+        for j in range(len(listX)):
+            gcd = math.gcd(listX[j][0], listX[j][1])
+            if gcd > 1:
+                break
+            else:
+                myList.append(listM[m])
+print(myList)
+                
 
-
-""" for i in range(1, k):
-    x = itertools.combinations(listOK, i) """
-    # 
-    
-    
-    
-    # print(list(x))
-    
+        
