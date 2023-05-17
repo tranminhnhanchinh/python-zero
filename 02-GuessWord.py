@@ -31,7 +31,7 @@ while turn <= 12:
             print(f"There is a letter in your Word \n", *keywordPass)
         else:
             print(
-                f"There are {k} {letter} letters in your Word \n", *keywordPass)
+                f"There are {k} {guessWord} letters in your Word \n", *keywordPass)
     else:
         print("That's not a good choice")
     printedWord = "".join(keywordPass)

@@ -14,11 +14,12 @@ Your task is to complete the function findNumber() which takes a single variable
 number which only contains odd digits.
 
 """
+
 import re
 listNumber = []
 k = 1
 i = 1
-while k < 13:
+while k < 1000:
     i = int(i) + 2
     i = str(i)
     boolIt =[]
